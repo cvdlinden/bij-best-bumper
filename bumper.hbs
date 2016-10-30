@@ -1,0 +1,49 @@
+---
+title: Bumper
+bumper: active
+---
+	{{> navbar }}
+
+	{{!-- begin: content container --}}
+	<div class="container home">
+		<div class="row">
+			
+			{{!-- begin: content --}}
+			<div class="col-sm-4 col-sm-offset-4 page">
+				<div id="identity">
+					<h1>Bij Best
+					<small>Breakfast, Lunch &amp; Coffee</small>
+					</h1>
+				</div>
+				<div id="visual">
+					<img src="assets/img/vis1.jpg" alt="eten" class="img-responsive" />
+				</div>
+				<div id="teaser" class="modal fade onload" role="dialog" tabindex="1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h3 class="modal-title">Binnenkort open in Delft</h3>
+							</div>
+							<div class="modal-body">
+								<h2 class="text-center">Bij Best <small>Breakfast, Lunch &amp; Coffee</small></h2>
+								<p class="lead text-center">
+									Houd onze website in de gaten!
+								</p>
+							</div>
+							<!--
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+							-->
+						</div>
+					</div>
+				</div>
+			</div>
+			{{!-- end: content --}}
+
+		</div>
+	</div>
+	{{!-- end: content container --}}
+
+{{> footer }}
