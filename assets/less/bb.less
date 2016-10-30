@@ -5,11 +5,16 @@
 @import "bb/mixins.less";
 @import "bb/scaffolding.less";
 @import "bb/alerts.less";
+@import "bb/modals.less";
 
 // Own modules
 // --------------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poly");
 // @import "bb/testResponsiveHelpers.less"; // debug
 @import "bb/demoElements.less";
+@import "bb/identity.less";
+@import "bb/home.less";
+@import "bb/bumper.less";
 @import "bb/footer.less";
 @import "bb/ribbon.less";
 
@@ -19,3 +24,10 @@
 // seperate files like the examples above when you exceed a few hundred lines
 // of code. Otherwise it will definitely have a negative impact on
 // maintainabilty.
+
+// Browsehappy exemption
+.browsehappy {
+    text-align: center;
+    background: #ff6;
+    padding: 5px;
+}
