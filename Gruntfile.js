@@ -299,9 +299,10 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						flatten: true,
+						flatten: false,
+						cwd: '<%= config.server %>/',
 						src: [
-							'<%= config.server %>/*.html'
+							'*.html', 'errors/*.html'
 						],
 						dest: '<%= config.dist %>/'
 					}
@@ -468,14 +469,14 @@ module.exports = function (grunt) {
 			options: {
 				ignore: ['Bad value “X-UA-Compatible” for attribute “http-equiv” on XHTML element “meta”.']
 			},
-			all: ['<%= config.server %>/*.html']
+			all: ['<%= config.server %>/*.html', '<%= config.server %>/errors/*.html']
 		},
 
 		bootlint: {
 			options: {
 				stoponerror: true
 			},
-			files: ['<%= config.server %>/*.html']
+			files: ['<%= config.server %>/*.html', '<%= config.server %>/errors/*.html']
 		},
 
 		githooks: {
@@ -502,7 +503,7 @@ module.exports = function (grunt) {
 			dev: {
 				files: [{
 					cwd: '.',
-					src: ['*.hbs'],
+					src: ['*.hbs', 'errors/*.hbs'],
 					dest: '<%= config.server %>'
 				}],
 				options: {
@@ -524,7 +525,7 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= config.dist %>',
-					src: ['*.html'],
+					src: ['*.html', 'errors/*.html'],
 					dest: '<%= config.dist %>'
 				}]
 			}
@@ -563,7 +564,7 @@ module.exports = function (grunt) {
 				}
 			},
 			html: {
-				files: ['*.hbs', 'templates/*.hbs', 'partials/*.hbs', 'templates/helpers/helpers.js'],
+				files: ['*.hbs', 'errors/*.hbs', 'templates/*.hbs', 'partials/*.hbs', 'templates/helpers/helpers.js'],
 				tasks: ['generator', 'newer:htmllint', 'newer:bootlint'],
 				options: {
 					spawn: false
