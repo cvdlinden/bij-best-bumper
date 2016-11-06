@@ -1,18 +1,57 @@
 //
-// Bumper page logo
+// Bumper page 
 // --------------------------------------------------
-// Just the logo v1
+// Containing the teaser
 
-// Bumper page logo v1
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 .bumper {
-    padding-top: 25px;
-    #identity {
-        position: relative;
-        height: 280px;
-        background: transparent url("@{bb-img-path}bb-logo.png") 50% 0 no-repeat;
-        > h1 {
-            position: absolute;
-            left: -999em;
-        }
+    background: #fff url("@{bb-img-path}/bumper-back-xs.jpg") 50% 0 no-repeat;
+    background-size: 100% auto;
+    min-height: 580px;
+
+    #teaser {
+        margin-top: 30px;
+        background: #fff;
+        border: 1px solid #3f441e;
+        border-top: 10px solid #3f441e;
     }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media @sm-and-above {
+
+    .bumper {
+        background-size: 544px auto;
+    }
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media @md-and-above {
+
+    .bumper {
+        background-size: 544px auto;
+        min-height: 950px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media @lg-and-above {
+
+    .bumper {
+        background-size: 544px auto;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media @xl-and-above {
+
+    .bumper {
+        background-size: 544px auto;
+    }
+
 }
