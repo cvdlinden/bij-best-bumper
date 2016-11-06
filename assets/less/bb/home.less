@@ -1,12 +1,19 @@
+//
 // Home page css
+// --------------------------------------------------
+// Just the logo v1
 
-.zhome {}
-.zhome .page {}
-.zhome .page #teaser {
-    position: absolute;
-    top: 25%;
-    border: 1px solid #eee;
-    border-top: 15px solid #3f441e;
-    width: 100%;
-    background: #fff;
+
+// Home page logo v1
+.home {
+    padding-top: 25px;
+    #identity {
+        position: relative;
+        height: 280px;
+        background: transparent url("@{bb-img-path}/bb-logo.png") 50% 0 no-repeat;
+        > h1 {
+            position: absolute;
+            left: -999em;
+        }
+    }
 }

@@ -7,9 +7,50 @@
 #identity {
     position: relative;
     height: 100px;
-    background: transparent url("@{bb-img-path}bb-logo.png") 0 0 no-repeat;
+    background: #fff url("@{bb-img-path}/bb-logo.png") 0 0 no-repeat;
+    background-size: 100px auto;
     > h1 {
         position: absolute;
         left: -999em;
     }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media @sm-and-above {
+
+    #identity {
+        background-size: 100px auto;
+    }
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media @md-and-above {
+
+    #identity {
+        height: 150px;
+        background-size: 150px auto;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media @lg-and-above {
+
+    #identity {
+        height: 150px;
+        background-size: 150px auto;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media @xl-and-above {
+
+    #identity {
+        height: 180px;
+        background-size: 180px auto;
+    }
+
 }
