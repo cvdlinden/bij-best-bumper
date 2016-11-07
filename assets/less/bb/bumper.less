@@ -6,15 +6,22 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 .bumper {
-    background: #fff url("@{bb-img-path}/bumper-back-xs.jpg") 50% 0 no-repeat;
-    background-size: 100% auto;
-    min-height: 580px;
+
+    .center {
+        background: #fff url("@{bb-img-path}/bumper-back-center-xs.jpg") 50% 0 no-repeat;
+        background-size: 290px auto;
+        min-height: 640px;
+    }
 
     #teaser {
-        margin-top: 30px;
+        margin: 30px -10px 0;
         background: #fff;
         border: 1px solid #3f441e;
-        border-top: 10px solid #3f441e;
+        border-top-width: 15px;
+
+        h2 {
+            margin-top: 12px;
+        }
     }
 }
 
@@ -22,7 +29,10 @@
 @media @sm-and-above {
 
     .bumper {
-        background-size: 544px auto;
+        .center {
+            background: #fff url("@{bb-img-path}/bumper-back-center-lg.jpg") 50% 0 no-repeat;
+            background-size: 530px auto;
+        }
     }
 
 }
@@ -32,8 +42,22 @@
 @media @md-and-above {
 
     .bumper {
-        background-size: 544px auto;
-        min-height: 950px;
+        .left {
+            background: #fff url("@{bb-img-path}/bumper-back-left-xs.jpg") 50% 0 no-repeat;
+            background-size: 345px auto;
+            min-height: 760px;
+            border-right: 10px solid #fff;
+        }
+        .center {
+            background-size: 345px auto;
+            min-height: 760px;
+        }
+        .right {
+            background: #fff url("@{bb-img-path}/bumper-back-right-xs.jpg") 100% 0 no-repeat;
+            background-size: 345px auto;
+            min-height: 760px;
+            border-left: 10px solid #fff;
+        }
     }
 
 }
@@ -42,7 +66,18 @@
 @media @lg-and-above {
 
     .bumper {
-        background-size: 544px auto;
+        .left {
+            background: #fff url("@{bb-img-path}/bumper-back-left-lg.jpg") 50% 0 no-repeat;
+            background-size: 455px auto;
+        }
+        .center {
+            background: #fff url("@{bb-img-path}/bumper-back-center-lg.jpg") 50% 0 no-repeat;
+            background-size: 455px auto;
+        }
+        .right {
+            background: #fff url("@{bb-img-path}/bumper-back-right-lg.jpg") 100% 0 no-repeat;
+            background-size: 455px auto;
+        }
     }
 
 }
@@ -51,7 +86,15 @@
 @media @xl-and-above {
 
     .bumper {
-        background-size: 544px auto;
+        .left {
+            background-size: 555px auto;
+        }
+        .center {
+            background-size: 555px auto;
+        }
+        .right {
+            background-size: 555px auto;
+        }
     }
 
 }

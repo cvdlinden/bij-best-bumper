@@ -49,13 +49,17 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-//@gray-base:              #3f441e;
-@gray-base:              #262B05;
+@gray-base:              #3f441e;
 // @gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-darker:            darken(@gray-base, 20%); // #222
 // @gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray-dark:              darken(@gray-base, 13.5%);   // #333
 // @gray:                   lighten(@gray-base, 33.5%); // #555
+@gray:                   @gray-base; // #555
 // @gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-light:             lighten(@gray-base, 13.5%); // #777
 // @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-lighter:           lighten(@gray-base, 20%); // #eee
 
 @brand-primary:         darken(#3f441e, 6.5%); // #337ab7
 // @brand-success:         #5cb85c;
@@ -69,10 +73,10 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
-//@body-bg:               #3f441e;
+// @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-darker;
+//@text-color:            @gray-darker;
+@text-color:            @gray;
 
 //** Global textual link color.
 // @link-color:            @brand-primary;
@@ -899,7 +903,7 @@
 // @abbr-border-color:           @gray-light;
 //** Headings small color
 // @headings-small-color:        @gray-light;
-@headings-small-color:        @gray-dark;
+//@headings-small-color:        @gray-dark;
 //** Blockquote small color
 // @blockquote-small-color:      @gray-light;
 //** Blockquote font size

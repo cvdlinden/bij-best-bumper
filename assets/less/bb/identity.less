@@ -6,10 +6,16 @@
 // Homepage logo
 #identity {
     position: relative;
-    height: 100px;
-    background: #fff url("@{bb-img-path}/bb-logo.png") 0 0 no-repeat;
-    background-size: 100px auto;
-    > h1 {
+    height: 85px;
+    background: #fff url("@{bb-img-path}/bb-identity.png") 50% 5px no-repeat;
+    background-size: 290px auto;
+    
+    a {
+        display: block;
+        height: 85px;
+    }
+
+    h1 {
         position: absolute;
         left: -999em;
     }
@@ -19,8 +25,13 @@
 @media @sm-and-above {
 
     #identity {
-        background-size: 100px auto;
-    }
+        height: 140px;
+        background-size: 530px auto;
+ 
+        a {
+            height: 140px;
+        }
+   }
 
 }
 
@@ -29,8 +40,12 @@
 @media @md-and-above {
 
     #identity {
-        height: 150px;
-        background-size: 150px auto;
+        height: 95px;
+        background-size: 345px auto;
+ 
+        a {
+            height: 95px;
+        }
     }
 
 }
@@ -39,8 +54,12 @@
 @media @lg-and-above {
 
     #identity {
-        height: 150px;
-        background-size: 150px auto;
+        height: 125px;
+        background-size: 455px auto;
+ 
+        a {
+            height: 125px;
+        }
     }
 
 }
@@ -49,8 +68,12 @@
 @media @xl-and-above {
 
     #identity {
-        height: 180px;
-        background-size: 180px auto;
+        height: 150px;
+        background-size: 555px auto;
+ 
+        a {
+            height: 150px;
+        }
     }
 
 }
