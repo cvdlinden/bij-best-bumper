@@ -1,0 +1,27 @@
+---
+home: active
+---
+	{{!--> navbar --}}
+
+	{{!-- begin: content container --}}
+	<div class="container bumper">
+		<div class="row">
+			
+			{{!-- begin: content --}}
+			<div class="col-sm-3 hidden-xs left"><!-- empty --></div>
+			<div class="col-sm-6 center">
+				{{> identity }}
+				<div class="message">
+                    <h3 class="text-center">Hartelijk dank voor je e-mailadres.</h3>
+                    <p class="text-center">Zodra de site online is geven we jou een seintje.</p>
+                    <p class="text-center"><a href="/">Terug naar de homepage</a></p>
+				</div>
+			</div>
+			<div class="col-sm-3 hidden-xs right"><!-- empty --></div>
+			{{!-- end: content --}}
+
+		</div>
+	</div>
+	{{!-- end: content container --}}
+
+{{> footer }}
