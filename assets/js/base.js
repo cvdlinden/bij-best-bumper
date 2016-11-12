@@ -70,9 +70,4 @@ bijBestBumper.base = (function () {
 		}
 	})();
 
-	// // Show alerts/modal dialogs if required
-	// (function () {
-	// 	$('.modal.onload').modal('show');
-	// })();
-
 })();
