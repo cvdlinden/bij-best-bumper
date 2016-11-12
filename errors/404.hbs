@@ -5,17 +5,23 @@ home: active
 	{{!--> navbar --}}
 
 	{{!-- begin: content container --}}
-	<div class="container">
-		<div class="row">
+	<div class="container bumper">
+		<div class="left">
+			<div class="right">
+				<div class="row">
 			
-			{{!-- begin: content --}}
-			<div class="col-sm-6 col-sm-offset-3">
-				{{> identity }}
-                <h2>404 - Niet gevonden</h2>
-				<p>De pagina die je zocht kan helaas niet gevonden worden.</p>
-			</div>
-			{{!-- end: content --}}
+					{{!-- begin: content --}}
+					<div class="col-sm-6 center col-sm-offset-3">
+						{{> identity }}
+						
+						<h2>404 - Niet gevonden</h2>
+						<p>De pagina die je zocht kan helaas niet gevonden worden.</p>
 
+					</div>
+					{{!-- end: content --}}
+
+				</div>
+			</div>
 		</div>
 	</div>
 	{{!-- end: content container --}}

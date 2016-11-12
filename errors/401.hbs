@@ -5,17 +5,23 @@ home: active
 	{{!--> navbar --}}
 
 	{{!-- begin: content container --}}
-	<div class="container">
-		<div class="row">
+	<div class="container bumper">
+		<div class="left">
+			<div class="right">
+				<div class="row">
 			
-			{{!-- begin: content --}}
-			<div class="col-sm-6 col-sm-offset-3">
-				{{> identity }}
-                <h2>401 - Machtiging vereist</h2>
-				<p>Voor deze pagina heb je een machtiging nodig.</p>
-			</div>
-			{{!-- end: content --}}
+					{{!-- begin: content --}}
+					<div class="col-sm-6 center col-sm-offset-3">
+						{{> identity }}
 
+						<h2>401 - Machtiging vereist</h2>
+						<p>Voor deze pagina heb je een machtiging nodig.</p>
+
+					</div>
+					{{!-- end: content --}}
+
+				</div>
+			</div>
 		</div>
 	</div>
 	{{!-- end: content container --}}
