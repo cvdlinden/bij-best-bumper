@@ -5,78 +5,94 @@ home: active
 
 	{{!-- begin: content container --}}
 	<div class="container bumper">
-		<div class="row">
-			
-			{{!-- begin: content --}}
-			<div class="col-sm-3 hidden-xs left"><!-- empty --></div>
-			<div class="col-sm-6 center">
-				{{> identity }}
-				<div class="message">
-					<h2 class="text-center">Binnenkort open in Delft</h2>
-					<h3 class="text-center">Bij Best</h3>
-					<p class="lead text-center">Breakfast, Lunch &amp; Coffee</p>
-					<p class="text-center">
-						Houd onze website in de gaten!
-					</p>
-				</div>
-				<div class="message">
-					<h3>Nieuwsgierig?</h3>
-					<p>
-						 Laat je e-mailadres achter en we geven je een seintje zodra de site online is.
-					</p>
-					<p>
-						 Tegen inlevering van je adres ontvang je tijdens onze feestelijke openingsmaand een presentje!
-					</p>
-					<div id="3b7d42c36c2cec849fa682e7">
-						<form method="post" action="https://www.formgenerator.nl/generator/process/jsform/">
-							<input name="uuid" value="3b7d42c36c2cec849fa682e7" type="hidden">
-							<input name="form_token" value="551266c873e60b9c49a567d9d859d0" type="hidden">
-							<div class="form-group">
-								<label for="input-863350">Jouw e-mailadres:</label>
-								<input id="input-863350" name="input-863350" value="" class="form-control" type="email">
+		<div class="left">
+			<div class="right">
+				<div class="row">
+					
+					{{!-- begin: content --}}
+					<div class="col-sm-6 center col-sm-offset-3">
+						{{> identity }}
+
+						<div class="parallax">
+							<div class="jumbotron">
+								<h2>Binnenkort open in Delft!</h2>
 							</div>
-							<input id="submit-863345" name="submit-863345" class="btn btn-primary" value="Verstuur" type="submit">
-						</form>
-					</div>
-					<script>
-					if (typeof(jQuery)=="undefined") {
-						document.write("<script src=\"libs/libs.min.js\"><\/script>");
-					}
-					</script>
-					<script>
-					$(document).ready(function() {
-						var mailDiv = $("#3b7d42c36c2cec849fa682e7");
-						var mailForm = $("#3b7d42c36c2cec849fa682e7 form");
-						mailForm.submit(function(e) {
-							e.preventDefault();
-							$.ajax({
-								crossDomain: true,
-								type: "POST",
-								url: "https://www.formgenerator.nl/generator/process/jsform/",
-								data: mailForm.serialize(),
-								success: function(data) {
-									if (data.redirect) {
-										window.location = data.redirect;
-									}
-									// The data is valid, do redirect if supplied, else show succes text
-									if (data.is_valid) {
-										var url = 'https://www.formgenerator.nl/generator/process/success/';
-										$.get(url, function(response) {
-											mailDiv.html(response.html);
-										});
-									}
-								},
-								dataType: "json"
+						</div>
+						
+						<div class="message">
+							<h3>Bij Best <small>Breakfast, Lunch &amp; Coffee</small></h3>
+							<p>
+								Houd onze website in de gaten!
+							</p>
+						</div>
+
+						<div class="parallax">
+							<div class="jumbotron">
+								<h2>Nieuwsgierig?</h2>
+							</div>
+						</div>
+
+						<div class="message">
+							<p>
+								Laat je e-mailadres achter en we geven je een seintje zodra de site online is.
+							</p>
+							<p>
+								Tegen inlevering van je adres ontvang je tijdens onze feestelijke openingsmaand een presentje!
+							</p>
+							<div id="3b7d42c36c2cec849fa682e7">
+								<form method="post" action="https://www.formgenerator.nl/generator/process/jsform/">
+									<input name="uuid" value="3b7d42c36c2cec849fa682e7" type="hidden">
+									<input name="form_token" value="551266c873e60b9c49a567d9d859d0" type="hidden">
+									<div class="form-group">
+										<label for="input-863350">Jouw e-mailadres:</label>
+										<input id="input-863350" name="input-863350" value="" class="form-control" type="email">
+									</div>
+									<input id="submit-863345" name="submit-863345" class="btn btn-primary pull-right" value="Verstuur" type="submit">
+								</form>
+							</div>
+							<script>
+							if (typeof(jQuery)=="undefined") {
+								document.write("<script src=\"libs/libs.min.js\"><\/script>");
+							}
+							</script>
+							<script>
+							$(document).ready(function() {
+								var mailDiv = $("#3b7d42c36c2cec849fa682e7");
+								var mailForm = $("#3b7d42c36c2cec849fa682e7 form");
+								mailForm.submit(function(e) {
+									e.preventDefault();
+									$.ajax({
+										crossDomain: true,
+										type: "POST",
+										url: "https://www.formgenerator.nl/generator/process/jsform/",
+										data: mailForm.serialize(),
+										success: function(data) {
+											if (data.redirect) {
+												window.location = data.redirect;
+											}
+											// The data is valid, do redirect if supplied, else show succes text
+											if (data.is_valid) {
+												var url = 'https://www.formgenerator.nl/generator/process/success/';
+												$.get(url, function(response) {
+													mailDiv.html(response.html);
+												});
+											}
+										},
+										dataType: "json"
+									});
+								});
 							});
-						});
-					});
-					</script>
-					<p><br /><small><em>We beloven plechtig om jouw e-mailadres alleen te gebruiken om jou op de hoogte te houden over Bij Best!</em></small></p>
+							</script>
+							<p>
+								<small><em>We beloven plechtig om jouw e-mailadres alleen te gebruiken om jou op de hoogte te houden over Bij Best!</em></small>
+							</p>
+						</div>
+						
+					</div>
+					{{!-- end: content --}}
+
 				</div>
 			</div>
-			<div class="col-sm-3 hidden-xs right"><!-- empty --></div>
-			{{!-- end: content --}}
-
 		</div>
 	</div>
 	{{!-- end: content container --}}

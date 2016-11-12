@@ -6,22 +6,41 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 .bumper {
+    position: relative;
 
     .center {
-        background: #fff url("@{bb-img-path}/bumper-back-center-xs.jpg") 50% 0 no-repeat;
-        background-size: 290px auto;
+        background-color: #fff;
         min-height: 640px;
-    }
 
-    .message {
-        margin-top: 30px;
-        padding: 10px;
-        background: #fff;
-
-        h2, h3 {
-            margin-top: 12px;
+        .parallax {
+            background: url("@{bb-img-path}/bumper-back-center-xs.jpg") no-repeat fixed center center;
+            background-size: cover;
+            position: relative;
+            min-height: 150px; /*same height as jumbotron */
+            border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+            .jumbotron {
+                margin-top: 30px;
+                height: 150px;
+                color: #fff;
+                text-shadow: 1px 1px 2px #000;
+                background: transparent;
+                padding: 60px 15px 15px;
+                h2 {
+                    margin-top: 12px;
+                }
+            }
         }
+
+        .message {
+            background: #fff;
+
+            h2, h3 {
+                margin-top: 12px;
+            }
+        }
+
     }
+
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -29,8 +48,10 @@
 
     .bumper {
         .center {
-            background: #fff url("@{bb-img-path}/bumper-back-center-lg.jpg") 50% 0 no-repeat;
-            background-size: 530px auto;
+            .parallax {
+                background-image: url("@{bb-img-path}/bumper-back-center-lg.jpg");
+                 background-size: 640px auto;
+           }
         }
     }
 
@@ -43,17 +64,16 @@
     .bumper {
         .left {
             background: transparent url("@{bb-img-path}/bumper-back-left-xs.jpg") no-repeat fixed 0 0;
-            background-size: 345px auto;
-            min-height: 827px;
+            margin: 0 -15px;
         }
         .center {
-            background-size: 345px auto;
-            min-height: 827px;
+            .parallax {
+                background-image: url("@{bb-img-path}/bumper-back-center-lg.jpg");
+                background-size: 360px auto;
+            }
         }
         .right {
             background: transparent url("@{bb-img-path}/bumper-back-right-xs.jpg") no-repeat fixed 100% 0;
-            background-size: 345px auto;
-            min-height: 827px;
         }
     }
 
@@ -65,15 +85,15 @@
     .bumper {
         .left {
             background: transparent url("@{bb-img-path}/bumper-back-left-lg.jpg") no-repeat fixed 0 0;
-            background-size: 455px auto;
         }
         .center {
-            background: #fff url("@{bb-img-path}/bumper-back-center-lg.jpg") no-repeat 50% 0;
-            background-size: 455px auto;
+            .parallax {
+                background-image: url("@{bb-img-path}/bumper-back-center-lg.jpg");
+                background-size: 470px auto;
+           }
         }
         .right {
             background: transparent url("@{bb-img-path}/bumper-back-right-lg.jpg") no-repeat fixed 100% 0;
-            background-size: 455px auto;
         }
     }
 
@@ -84,13 +104,13 @@
 
     .bumper {
         .left {
-            background-size: 555px auto;
         }
         .center {
-            background-size: 555px auto;
+            .parallax {
+                background-size: 570px auto;
+            }
         }
         .right {
-            background-size: 555px auto;
         }
     }
 
