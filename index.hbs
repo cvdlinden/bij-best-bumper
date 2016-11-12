@@ -50,11 +50,9 @@ home: active
 									<input id="submit-863345" name="submit-863345" class="btn btn-primary pull-right" value="Verstuur" type="submit">
 								</form>
 							</div>
-							<script>
-							if (typeof(jQuery)=="undefined") {
-								document.write("<script src=\"libs/libs.min.js\"><\/script>");
-							}
-							</script>
+							<!-- build:js:dist libs/libs.min.js -->
+							<script src="/libs/jquery/dist/jquery.js"></script>
+							<!-- /build -->
 							<script>
 							$(document).ready(function() {
 								var mailDiv = $("#3b7d42c36c2cec849fa682e7");
