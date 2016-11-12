@@ -37,10 +37,21 @@
 	width: 100%;
 	// Set the fixed height of the footer here
 	height: @mm_footer-height;
-	background-color: #fff;
+
 	> .container {
 		padding-right: 15px;
 		padding-left: 15px;
+
+		> .row > div {
+			background-color: #fff;
+			height: 60px;
+
+			> ul {
+				padding-top: 20px;
+			}
+		}
+
 	}
+
 	.footer-text { margin: @mm_footer-text-margin 0; }
 }
